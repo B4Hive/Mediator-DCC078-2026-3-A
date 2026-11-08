@@ -1,0 +1,15 @@
+@startuml Classes
+
+title Mediator
+hide members
+
+class Venda implements Setor
+class Financeiro implements Setor
+class Ouvidoria implements Setor
+class Cancelamento implements Setor
+
+Atendimento --> "1" Atendimento
+Cliente ..> Atendimento
+Atendimento ..> Setor
+
+@enduml
